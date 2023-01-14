@@ -21,7 +21,8 @@ campo.addEventListener("keydown",(evt)=>{
     //console.log(evt.key)
     if(evt.key === "Enter"){
     socketCliente.emit("message",{menssage : campo.value, username : user})
-    }
+        campo.value = "";
+}
 })
 socketCliente.on("menssages",(data)=>{
 let elementos = "";
