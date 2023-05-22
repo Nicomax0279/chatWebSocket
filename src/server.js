@@ -5,7 +5,7 @@ const express = require('express')
 const {Server} = require('socket.io')
 
 const app = express()
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 80
 
 
 app.use(express.json());
