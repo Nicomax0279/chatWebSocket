@@ -24,6 +24,8 @@ io.on("connection",(socket)=>{
     socket.emit("menssages",historicoMensajaes)
 
     socket.on("message",(data)=>{
+        console.log(req)
+        data.email = req
         console.log(data)
         historicoMensajaes.push(data)
         io.sockets.emit("menssages",historicoMensajaes)
